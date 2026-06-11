@@ -1,4 +1,4 @@
-# Embedding Semantic Risk into Distance Fields and CBFs
+# SafeDF
 
 Project website for "Embedding Semantic Risk into Distance Fields and CBFs for Online Monocular Safe Control".
 
