@@ -42,6 +42,32 @@ body {
   pointer-events: none;
 }
 
+main > section.section.hero.is-light {
+  padding: 0;
+}
+
+main > section.section.hero.is-light .hero-body {
+  padding: 2.5rem 1.5rem;
+}
+
+main > section#abstract.section.hero.is-light > .container {
+  padding: 2.5rem 1.5rem;
+}
+
+main > section#BibTeX.section {
+  padding: 2.5rem 1.5rem;
+}
+
+.teaser .hero-body {
+  padding-top: 1.5rem;
+  padding-bottom: 2.25rem;
+}
+
+.section .title.is-3,
+.section .title.is-4 {
+  margin-bottom: 1.25rem !important;
+}
+
 .main-video,
 .result-videos video {
   display: block;
@@ -137,13 +163,13 @@ p.teaser-caption {
 }
 
 .paper-table-figure {
-  margin: 1.4rem auto 0;
+  margin: 1rem auto 0;
   overflow-x: auto;
   text-align: center;
 }
 
 .paper-table-figure + .paper-table-figure {
-  margin-top: 2.5rem;
+  margin-top: 1.9rem;
 }
 
 .paper-table-image {
@@ -165,15 +191,42 @@ p.teaser-caption {
 }
 
 .paper-result-figures {
-  margin-top: 2rem;
+  margin-top: 1.5rem;
 }
 
 @media (max-width: 900px) {
   .hero-intro .hero-body {
-    padding-top: 3rem;
+    padding-top: 2.4rem;
+    padding-bottom: 1rem;
   }
 
   .publication-title .title-line {
     white-space: normal;
+  }
+}
+
+@media (max-width: 768px) {
+  main > section.section.hero.is-light .hero-body,
+  main > section#abstract.section.hero.is-light > .container,
+  main > section#BibTeX.section {
+    padding: 2rem 1rem;
+  }
+
+  .section .title.is-3,
+  .section .title.is-4 {
+    margin-bottom: 1rem !important;
+  }
+
+  .teaser .hero-body {
+    padding-top: 0.75rem;
+    padding-bottom: 1.75rem;
+  }
+
+  .teaser-caption {
+    margin-top: 0.75rem;
+  }
+
+  .result-videos {
+    margin-top: 1rem;
   }
 }
