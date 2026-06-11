@@ -27,7 +27,7 @@
   <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/index.css">
   <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
-  <link rel="stylesheet" href="static/css/site-overrides.css?v=20260611-compact-spacing2">
+  <link rel="stylesheet" href="static/css/site-overrides.css?v=20260611-robotics-layout1">
   <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <link rel="preload" href="static/css/bulma-slider.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -184,7 +184,7 @@
       </div>
     </section>
 
-    <section class="section hero is-light" id="robotics">
+    <section class="section hero is-light robotics-section" id="robotics">
       <div class="container">
         <div class="hero-body">
           <h2 class="title is-3 has-text-centered">Real-Robot Experiments</h2>
@@ -194,66 +194,68 @@
             semantic-aware safe control in an online setting.
           </p>
 
-          <div class="columns is-centered result-videos">
-            <div class="column is-half">
-              <p class="has-text-weight-semibold">Navigation in a loop</p>
-              <video muted loop controls preload="metadata" playsinline poster="static/robotics_materials/navigation_1_preview.png">
-                <source src="static/robotics_materials/navigation_1.mp4" type="video/mp4">
-              </video>
+          <div class="experiment-block">
+            <h3 class="experiment-heading">Autonomous Navigation</h3>
+            <div class="columns is-centered result-videos">
+              <div class="column is-half">
+                <p class="has-text-weight-semibold">Navigation in a loop</p>
+                <video muted loop controls preload="metadata" playsinline poster="static/robotics_materials/navigation_1_preview.png">
+                  <source src="static/robotics_materials/navigation_1.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="column is-half">
+                <p class="has-text-weight-semibold">Navigation with unknown obstacle</p>
+                <video muted loop controls preload="metadata" playsinline poster="static/robotics_materials/navigation_2_preview.png">
+                  <source src="static/robotics_materials/navigation_2.mp4" type="video/mp4">
+                </video>
+              </div>
             </div>
-            <div class="column is-half">
-              <p class="has-text-weight-semibold">Navigation with unknown obstacle</p>
-              <video muted loop controls preload="metadata" playsinline poster="static/robotics_materials/navigation_2_preview.png">
-                <source src="static/robotics_materials/navigation_2.mp4" type="video/mp4">
-              </video>
+
+            <div class="paper-result-figures navigation-result-figure">
+              <figure class="paper-figure">
+                <img src="static/images/paper_figure5_navigation.png" alt="Autonomous navigation trajectories in real-world experiments" loading="lazy">
+              </figure>
             </div>
+            <p class="figure-caption">
+              <strong>Autonomous navigation trajectories in real-world experiments.</strong>
+              (a) Navigation in a loop. (b) Navigation with an unknown obstacle
+              introduced during execution.
+            </p>
           </div>
 
-          <div class="paper-result-figures">
-            <figure class="paper-figure">
-              <img src="static/images/paper_figure5_navigation.png" alt="Autonomous navigation trajectories in real-world experiments" loading="lazy">
-            </figure>
-          </div>
-          <p class="figure-caption">
-            <strong>Autonomous navigation trajectories in real-world experiments.</strong>
-            (a) Navigation in a loop. (b) Navigation with an unknown obstacle
-            introduced during execution.
-          </p>
-
-          <div class="columns is-centered result-videos">
-            <div class="column is-half">
-              <p class="has-text-weight-semibold">Teleoperation with a Ball</p>
-              <video muted loop controls preload="metadata" playsinline poster="static/robotics_materials/tele_ball_preview.png">
-                <source src="static/robotics_materials/tele_ball.mp4" type="video/mp4">
-              </video>
+          <div class="experiment-block">
+            <h3 class="experiment-heading">Teleoperation</h3>
+            <div class="columns is-centered result-videos">
+              <div class="column is-half">
+                <p class="has-text-weight-semibold">Teleoperation with a Ball</p>
+                <video muted loop controls preload="metadata" playsinline poster="static/robotics_materials/tele_ball_preview.png">
+                  <source src="static/robotics_materials/tele_ball.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="column is-half">
+                <p class="has-text-weight-semibold">Teleoperation with a Dog</p>
+                <video muted loop controls preload="metadata" playsinline poster="static/robotics_materials/tele_dog_preview.png">
+                  <source src="static/robotics_materials/tele_dog.mp4" type="video/mp4">
+                </video>
+              </div>
             </div>
-            <div class="column is-half">
-              <p class="has-text-weight-semibold">Teleoperation with a Dog</p>
-              <video muted loop controls preload="metadata" playsinline poster="static/robotics_materials/tele_dog_preview.png">
-                <source src="static/robotics_materials/tele_dog.mp4" type="video/mp4">
-              </video>
-            </div>
-          </div>
 
-          <div class="columns paper-result-figures">
-            <div class="column is-half">
+            <div class="paper-result-figures teleop-result-figures">
               <figure class="paper-figure small">
                 <img src="static/images/tele_ball.png" alt="Teleoperation result with a ball" loading="lazy">
               </figure>
-            </div>
-            <div class="column is-half">
               <figure class="paper-figure small">
                 <img src="static/images/tele_dog.png" alt="Teleoperation result with a dog" loading="lazy">
               </figure>
             </div>
+            <p class="figure-caption">
+              <strong>Teleoperated robot trajectories under different obstacle semantics.</strong>
+              (a) Low-risk obstacle (ball), where the robot allows closer
+              interaction with minimal intervention. (b) High-risk obstacle (dog),
+              where the safety filter activates earlier and maintains a larger
+              clearance.
+            </p>
           </div>
-          <p class="figure-caption">
-            <strong>Teleoperated robot trajectories under different obstacle semantics.</strong>
-            (a) Low-risk obstacle (ball), where the robot allows closer
-            interaction with minimal intervention. (b) High-risk obstacle (dog),
-            where the safety filter activates earlier and maintains a larger
-            clearance.
-          </p>
         </div>
       </div>
     </section>

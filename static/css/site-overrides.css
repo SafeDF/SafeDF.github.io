@@ -149,6 +149,44 @@ p.teaser-caption {
   margin-top: 1.5rem;
 }
 
+.robotics-section .subtitle {
+  max-width: 840px;
+  margin: 0 auto;
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  line-height: 1.55;
+}
+
+.experiment-block {
+  max-width: 1120px;
+  margin: 2rem auto 0;
+  padding-top: 1.7rem;
+  border-top: 1px solid rgb(148 163 184 / 0.24);
+}
+
+.robotics-section .subtitle + .experiment-block {
+  margin-top: 1.4rem;
+  padding-top: 0;
+  border-top: 0;
+}
+
+.experiment-heading {
+  margin: 0 0 0.9rem;
+  color: var(--text-primary);
+  font-size: 1.35rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.experiment-block .result-videos {
+  margin-top: 0;
+}
+
+.robotics-section .result-videos .column {
+  padding-top: 0.55rem;
+  padding-bottom: 0.55rem;
+}
+
 .result-videos .column {
   text-align: left;
 }
@@ -194,6 +232,24 @@ p.teaser-caption {
   margin-top: 1.5rem;
 }
 
+.navigation-result-figure {
+  max-width: 980px;
+  margin: 1.25rem auto 0;
+}
+
+.teleop-result-figures {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.1rem;
+  max-width: 980px;
+  margin: 1.25rem auto 0;
+}
+
+.teleop-result-figures .paper-figure.small img {
+  max-height: 560px;
+  object-fit: contain;
+}
+
 @media (max-width: 900px) {
   .hero-intro .hero-body {
     padding-top: 2.4rem;
@@ -215,6 +271,56 @@ p.teaser-caption {
   .section .title.is-3,
   .section .title.is-4 {
     margin-bottom: 1rem !important;
+  }
+
+  .robotics-section .title.is-3 {
+    font-size: 1.45rem;
+    line-height: 1.15;
+    margin-bottom: 0.7rem !important;
+  }
+
+  .robotics-section .subtitle {
+    font-size: 0.96rem;
+    line-height: 1.45;
+  }
+
+  .experiment-block {
+    margin-top: 1.4rem;
+    padding-top: 1.25rem;
+  }
+
+  .robotics-section .subtitle + .experiment-block {
+    margin-top: 1rem;
+  }
+
+  .experiment-heading {
+    margin-bottom: 0.65rem;
+    font-size: 1.1rem;
+  }
+
+  .robotics-section .result-videos .column {
+    padding-top: 0.45rem;
+    padding-bottom: 0.45rem;
+  }
+
+  .robotics-section .result-videos .has-text-weight-semibold {
+    margin-bottom: 0.5rem;
+    font-size: 0.98rem;
+  }
+
+  .navigation-result-figure,
+  .teleop-result-figures {
+    margin-top: 1rem;
+  }
+
+  .teleop-result-figures {
+    gap: 0.65rem;
+  }
+
+  .experiment-block .figure-caption {
+    margin-top: 0.75rem;
+    font-size: 0.9rem;
+    line-height: 1.45;
   }
 
   .teaser .hero-body {
